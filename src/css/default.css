@@ -1,0 +1,258 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #101010;
+}
+
+h5,
+h4 {
+  margin: 0.5rem 0;
+}
+
+.mini {
+  font-size: 14px;
+}
+
+p,
+span {
+  margin: 0;
+}
+
+.expense-tracker-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #050505;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.expense-tracker-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.balance-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+}
+
+.balance-title {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.income-expenses-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.total {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.total-income-title,
+.total-expense-title {
+  color: #ffffff;
+  letter-spacing: 0.1rem;
+}
+
+#total-income {
+  color: rgb(51, 255, 0);
+}
+
+#total-expense {
+  color: rgb(255, 47, 47);
+}
+
+.sub-header-wrapper {
+  width: 100%;
+}
+
+.sub-header-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.transaction-list-wrapper {
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 8rem;
+  border-left: 1px solid white;
+}
+
+.transaction-list-wrapper::-webkit-scrollbar {
+  width: 1px;
+}
+
+.transaction-list-wrapper::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+.transaction-enter {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.transaction-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms ease-in;
+}
+
+.single-transaction-income {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1f1f1f;
+  position: relative;
+  margin-top: 0.4rem;
+  margin-left: 0.2rem;
+}
+
+.single-transaction-income::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  top: 0;
+  right: 2px;
+  background-color: rgb(51, 255, 0);
+  position: absolute;
+}
+
+.single-transaction-expense {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1f1f1f;
+  position: relative;
+  margin-top: 0.4rem;
+}
+
+.single-transaction-expense::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  top: 0;
+  right: 2px;
+  background-color: rgb(255, 47, 47);
+  position: absolute;
+}
+
+.transaction-data {
+  color: #707070;
+  display: flex;
+  align-items: center;
+}
+
+.positive-amount {
+  color: rgb(51, 255, 0);
+  margin-right: 0.4rem;
+}
+
+.neutral-amount {
+  color: #707070;
+}
+
+.negative-amount {
+  color: rgb(255, 47, 47);
+  margin-right: 0.4rem;
+}
+
+#add-transaction-form {
+  width: 100%;
+  padding: 0 0.8rem;
+}
+
+.label {
+  display: block;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.2rem 0.2rem;
+  background-color: #1f1f1f;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px #1f1f1f;
+  color: #707070;
+}
+
+.amount-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.amount-span {
+  color: #a8a8a8;
+  font-size: 10px;
+}
+
+.successfull-message {
+  font-size: 10px;
+  color: rgb(51, 255, 0);
+}
+
+.error-message {
+  font-size: 10px;
+  color: rgb(255, 47, 47);
+}
+
+#submit-add-transaction {
+  width: 100%;
+  padding: 0.2rem;
+  background-color: rgb(180, 0, 141);
+  border: none;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  transition: all 1s ease;
+}
+
+#submit-add-transaction:hover {
+  cursor: pointer;
+  background-color: rgb(255, 4, 201);
+}
+
+/******** RESPONSIVE ********/
+
+@media screen and (min-width: 550px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  body {
+    height: 100vh;
+    width: 100%;
+  }
+}
